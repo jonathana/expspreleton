@@ -1,4 +1,4 @@
-== expspreleton
+## expspreleton
 
 A express + mongodb + mongoose + mongoose-auth + ejs + bootstrap skeleton application for node.js.
 
