@@ -4,14 +4,13 @@
       <h2>SAY MY NAME!</h2>
     </div>
     <% if (links.length > 0) {
-      while (link.hasNext()) { %>
+      for (i in links) { var link = links[i]%>
         <div class="row-fluid">
           <div class="span4">
             <h2><%= link.title %></h2>
-            <p><%= link.url %></p>
-            <p><%= link.description %></p>
-            <p><%= link.created %></p>
-            <p><a class="btn" href="<%=link.url%>">Visit link &raquo;</a></p>
+            <p>URL=<%= link.url %></p>
+            <p>Description: <%= link.description %></p>
+            <p><a class="btn" target="_blank" href="<%=link.url%>">Visit link &raquo;</a></p>
           </div><!--/span-->
         </div><!--/row-->
       <% }} else { %> 
