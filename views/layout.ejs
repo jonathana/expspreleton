@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>SAY MY NAME!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="/tbs/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+    </style>
+    <link href="/tbs/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="/tbs/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/tbs/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/tbs/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/tbs/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/tbs/ico/apple-touch-icon-57-precomposed.png">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="brand" href="#">SAY MY NAME!</a>
+          <div class="btn-group pull-right">
+    	      <%if (!everyauth.loggedIn) { %>
+              <a class="btn" href="/auth/google">
+			        <i class="icon-cog"></i>Log in
+			      <% } else { %>
+              <a class="btn" href="/logout">
+              <i class="icon-user"></i> <%= JSON.stringify(everyauth.google.user.name) %>
+			      <% } %>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+    	<%- body %>
+      <hr>
+
+      <footer>
+        <p>&copy; (c) __ 2012</p>
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/tbs/js/jquery.js"></script>
+    <script src="/tbs/js/bootstrap-transition.js"></script>
+    <script src="/tbs/js/bootstrap-alert.js"></script>
+    <script src="/tbs/js/bootstrap-modal.js"></script>
+    <script src="/tbs/js/bootstrap-dropdown.js"></script>
+    <script src="/tbs/js/bootstrap-scrollspy.js"></script>
+    <script src="/tbs/js/bootstrap-tab.js"></script>
+    <script src="/tbs/js/bootstrap-tooltip.js"></script>
+    <script src="/tbs/js/bootstrap-popover.js"></script>
+    <script src="/tbs/js/bootstrap-button.js"></script>
+    <script src="/tbs/js/bootstrap-collapse.js"></script>
+    <script src="/tbs/js/bootstrap-carousel.js"></script>
+    <script src="/tbs/js/bootstrap-typeahead.js"></script>
+
+  </body>
+</html>
+

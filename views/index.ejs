@@ -1,0 +1,23 @@
+<div class="row-fluid">
+  <div class="span12">
+    <div class="hero-unit">
+      <h2>SAY MY NAME!</h2>
+    </div>
+    <% if (links.length > 0) {
+      while (link.hasNext()) { %>
+        <div class="row-fluid">
+          <div class="span4">
+            <h2><%= link.title %></h2>
+            <p><%= link.url %></p>
+            <p><%= link.description %></p>
+            <p><%= link.created %></p>
+            <p><a class="btn" href="<%=link.url%>">Visit link &raquo;</a></p>
+          </div><!--/span-->
+        </div><!--/row-->
+      <% }} else { %> 
+         <div class="hero-unit">
+          <h3>No links found</h3>
+        </div>
+      <% } %>
+  </div><!--/span-->
+</div><!--/row-->

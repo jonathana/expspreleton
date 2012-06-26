@@ -1,0 +1,12 @@
+{
+    "name": "application-name"
+  , "version": "0.0.1"
+  , "private": true
+  , "dependencies": {
+      "express": "2.5.10"
+    , "ejs": ">= 0.0.1"
+    , "mongoose-auth": ">= 0.0.12"
+    , "mongoose": ">=2.4.8"
+    , "everyauth": ">=0.2.28"
+  }
+}
